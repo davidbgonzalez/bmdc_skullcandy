@@ -3,9 +3,9 @@ Marketing Survey App
 
 The code in this folder is a Django app written in python.
 
-A working example can be found at: ec2-54-202-248-221.us-west-2.compute.amazonaws.com
+A working example can be found at: [app](http://ec2-54-202-248-221.us-west-2.compute.amazonaws.com)
 
-The admin to this app can be viewed at: ec2-54-202-248-221.us-west-2.compute.amazonaws.com/admin/
+The admin to this app can be viewed at: [admin](http://ec2-54-202-248-221.us-west-2.compute.amazonaws.com/admin/)
 
 
 Purpose
