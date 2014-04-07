@@ -1,0 +1,6 @@
+# This file may be used to create an environment using:
+# $ conda create --name <env> --file <this file>
+# platform: linux-64
+lxml=3.3.1=py27_0
+python=2.7.6=1
+python-amazon-product-api=0.2.7=py27_0
