@@ -1,0 +1,266 @@
+<html>
+
+<head>
+<style>
+#bg {
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+}
+#bg img {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
+  -webkit-filter: blur(150px);
+  -moz-filter: blur(150px);
+  -o-filter: blur(150px);
+  -ms-filter: blur(150px);
+  filter: blur(150px);
+  opacity: 0.4;
+}
+
+.content {
+  position: fixed;
+  left: 20%;
+  right: 0;
+  z-index: 9999;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+
+.after-post-cta {
+	margin-top: 80px;
+	margin-top: 5rem;
+	text-align: center;
+}
+
+
+.after-post-cta h3 {
+	font-family: 'museo-slab', sans-serif;
+	font-size: 60px;
+	font-size: 3.75rem;
+	font-weight: 500;
+	line-height: 1;
+	margin-bottom: 32px;
+	margin-bottom: 2rem;
+	text-align: center;
+}
+
+.after-post-cta h3 span {
+	color: #a41600;
+	display: block;
+	font-size: 22px;
+	font-size: 1.375rem;
+	font-weight: 500;
+	line-height: 1.3;
+}
+
+.after-post-cta h3 span em {
+	font-family: Georgia, serif;
+	font-weight: normal;
+}
+
+
+/* Blue scheme */
+button,
+input[type="button"],
+input[type="submit"],
+.btn,
+.btn-primary-big,
+.btn-primary-medium,
+.btn-primary-small,
+.btn-secondary-big,
+.btn-secondary-medium,
+.btn-secondary-small,
+.btn-green-big,
+.btn-green-medium,
+.btn-green-small,
+.btn-gold-big,
+.btn-gold-medium,
+.btn-gold-small,
+.btn-gray,
+.wp-submit,
+.register-box .premise-checkout-wrap .input-submit,
+.sidebar .cb-freeupdates input[type=submit],
+.content .signup .form_submit {
+	box-shadow: inset 0 -3px 0 rgba(0,0,0,.2);
+	-moz-box-shadow: inset 0 -3px 0 rgba(0,0,0,.2);
+	-webkit-box-shadow: inset 0 -3px 0 rgba(0,0,0,.2);
+}
+
+.btn-gray {
+	color: #666;
+	position: relative;
+}
+
+.btn-primary-small,
+.btn-secondary-small,
+.btn-gold-small,
+.btn-green-small,
+.btn-gray {
+	box-shadow: inset 0 -2px 0 rgba(0,0,0,.2);
+	-moz-box-shadow: inset 0 -2px 0 rgba(0,0,0,.2);
+	-webkit-box-shadow: inset 0 -2px 0 rgba(0,0,0,.2);
+	
+	font-family:  'proxima-nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+button,
+input[type="button"],
+input[type="submit"],
+.content .premise-checkout-wrap .input-submit,
+.btn,
+.btn-primary-big,
+.btn-primary-medium,
+.btn-primary-small {
+	background-color: #0274be;
+	background-image: none;
+}
+
+.btn-secondary-big,
+.btn-secondary-medium,
+.btn-secondary-small {
+	background-color: #333;
+	background-image: none;
+}
+
+.btn-gold-big,
+.btn-gold-medium,
+.btn-gold-small,
+.btn-green-big,
+.btn-green-medium,
+.btn-green-small,
+.wp-submit,
+.register-box .premise-checkout-wrap .input-submit,
+.sidebar .cb-freeupdates input[type=submit],
+.content .signup .form_submit {
+	background-color: #9bc23c;
+	border: 2px solid #fff !important;
+	border-radius: 4px;
+	background-image: none;
+}
+
+.btn-primary-big,
+.btn-secondary-big,
+.btn-green-big,
+.btn-gold-big {
+	font-size: 24px;
+	font-size: 1.5rem;
+	padding: 16px 32px;
+	padding: 1rem 2rem;
+}
+
+button,
+input[type="button"],
+input[type="submit"],
+.btn,
+.btn-primary-medium,
+.btn-secondary-medium,
+.btn-green-medium,
+.btn-gold-medium {
+	font-size: 18px;
+	font-size: 1.125rem;
+	padding: 12px 24px;
+	padding: 0.75rem 1.5rem;
+}
+
+.btn-primary-small,
+.btn-secondary-small,
+.btn-green-small,
+.btn-gold-small {
+	font-size: 14px;
+	font-size: 0.875rem;
+	padding: 8px 16px;
+	padding: 0.5rem 1rem;
+}
+
+button:hover,
+input:hover[type="button"],
+input:hover[type="submit"],
+.content .premise-checkout-wrap .input-submit:hover,
+.btn:hover,
+.btn-primary-big:hover,
+.btn-primary-medium:hover,
+.btn-primary-small:hover {
+	box-shadow: inset 0 3px 0 rgba(0,0,0,.2);
+	-moz-box-shadow: inset 0 3px 0 rgba(0,0,0,.2);
+	-webkit-box-shadow: inset 0 3px 0 rgba(0,0,0,.2);
+	background: #005f9d;
+	color: #fff;
+}
+
+.btn-gray:hover {
+	background-color: #f1f1f1;
+	color: #0274be;
+}
+
+.btn-secondary-big:hover,
+.btn-secondary-medium:hover,
+.btn-secondary-small:hover {
+	box-shadow: inset 0 3px 0 rgba(0,0,0,.2);
+	-moz-box-shadow: inset 0 3px 0 rgba(0,0,0,.2);
+	-webkit-box-shadow: inset 0 3px 0 rgba(0,0,0,.2);
+	background: #222;
+	color: #fff;
+}
+
+.btn-gold-big:hover,
+.btn-gold-medium:hover,
+.btn-gold-small:hover,
+.btn-green-big:hover,
+.btn-green-medium:hover,
+.btn-green-small:hover,
+.wp-submit:hover,
+.register-box .premise-checkout-wrap .input-submit:hover,
+.sidebar .cb-freeupdates input[type=submit]:hover,
+.content .signup .form_submit:hover {
+	box-shadow: inset 0 3px 0 rgba(0,0,0,.1);
+	-moz-box-shadow: inset 0 3px 0 rgba(0,0,0,.1);
+	-webkit-box-shadow: inset 0 3px 0 rgba(0,0,0,.1);
+	background: #87ae28;
+	color: #fff;
+}
+
+.after-post-cta p {
+	color: #888;
+	padding: 4em;
+}
+.after-post-cta a {
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(151,71,0,0.35);
+	font-family: "icon-font";
+	text-decoration: inherit;
+}
+</style>
+</head>
+
+<body>
+<div id="bg" other="ID-100225181.jpg">
+  <img src="ID-100142747.jpg" alt="">
+</div>
+<div class="content">	
+	<div class="after-post-cta">
+		
+		<h3>Skullcandy <span>Enter to <em>Win</em> free headphones</span></h3>
+		
+				
+		<div class="bullets">
+			
+			<a href="twitter/login" class="btn-gold-big icon-check">Login with Twitter</a>
+			
+		</div>
+		
+		<p>Credits and fine print</p>
+	</div>
+
+</div>
+</body>
+</html>
