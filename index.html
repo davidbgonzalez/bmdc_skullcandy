@@ -31,39 +31,70 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h3>Overview of solution</h3>
-        <p>Executive overview</p>
-        <p>This is the submission for the Skullcandy dataset for the Big Mountain Data Competition.</p>
+        <h3>Executive overview</h3>
+        <p>This is our submission for the Skullcandy dataset for the Big Mountain Data Competition. We have taken careful consideration of both the questions posed in the competition documents, the kinds of data we could go after for a POC that would require minimal additional input from Skullcandy, and what we have seen in the way of trends at Skullcandy at large. We think there is a strong case to be made for greater involvement of predictive analytics in supporting Skullcandy’s ecommerce business and in establishing a strong Skullcandy customer electronics brand synonymous with personalized, individual, high-energy, and somewhat irreverent.</p>
+        <p>Our solution recommends incorporating BigData collection and predictive analytics at various customer touch points:</p>
         <ul>
-          <li>Using bigdata and machine learning methodologies to improve and simplify the process of managing brand image with multiple target audiences</li>
-          <li>Using bigdata and machine learning methodologies to identify key "archetype" individuals/muses wanting to engage with your brand</li>
-          <li>Using cloud resources to develop a cost effective POC for data collection, processing, and real-time responsive engagement from Skullcandy to their target audiences</li>
+          <li>Customer satisfaction and follow up surveys that allow for social media data gathering</li>
+          <li>Market validation surveys (e.g. buds subscription services) that allow for social media data gathering</li>
+          <li>Customer off-website (e.g. social media) engagement that uses dynamic messaging predicted to increase brand loyalty and begin fostering new customers</li>
+          <li>Personalized Amazon/ecommerce check-out experience with offers that are a reflection of predicted customer lifetime value</li>
         </ul>
-        <img src="images/bmdc_arch.png">j
-<p>Team members:</p>
+        <h3>Details regarding the submission</h3>
+        <p>We feel that with any solution that leverages BigData and machine learning (advanced analytics) there is a maturation that takes place in an organization. This maturation is the process of going from being reactive and primarily relying on domain expertise and instincts to leveraging sophisticated analyitics as a distinct competitive advantage. As an organization grows it’s need for sophisticated analytics it usually happens as the organization seeks the answer more and more difficult questions such as those proposed by Harris & Davenport in their book “Competing on Analyitics: The New Science of Winning”:</p>
+        <ol>
+          <li>Why is this happening? (statistical analysis)</li>
+          <li>What if these trends continue? (forecasting)</li>
+          <li>What will happen next? (predictive modeling)</li>
+          <li>What is the best that can happen? (optimization)</li>
+        </ol>
+        <p>In our proposed solutions we concentrated on how Skullcandy might use advanced analytics to support their growing efforts at creating a brand focused company in addition to being an ecommerce company. We feel that with Skullcandy’s trackrecord in the market-place that they potentially could juggle several facets of their brand image with help from advanced analytics. This would avail them of the option of attacking several target audiences to help Skullcandy establish a brand that is about consumer electronics that are personal, individualized, high-energy, and irreverent.</p>
+        <p>If Skullcandy were simply a one-dimensional brand focused on say, hip-hop culture, having supportive analytics would be helpful but not crucial to success. But Skullcandy appears to be taking a much more ambitious route: personalization. This does not mean that the Skullcandy’s brand need be dilute, just the opposite. By being about personal taste and by giving customers a way to express themselves Skullcandy could become an extension of each of their customers’ personal image -- potentially a very strong brand.</p>
+        <p>Digesting and reacting to the information needed to pull this off is a problem ideally situated to be supported by BigData and machine learning analytics.</p>
+        <p>In our solution we have developed an early POC of how Skullcandy might:</p>
+        <ul>
+          <li>Use BigData collection to improve and simplify the process of discovering how users perceive and engage with Skullcandy</li>
+          <li>Use real-time, predictive, analytics to identify “natural” clusters of users that fit an "archetype" user</li>
+          <li>Compare “archetype” users to internal “muses” or target audiences to help dial-in dynamic messaging and placement</li>
+          <li>Use predictive analytics to target key audiences in specific situations (e.g. male snowboarder that is a likely customer that just posted about a day on the slopes)</li>
+          <li>Use cloud resources to develop a cost effective, production ready, POC for data collection, data processing, and creating real-time responsive engagement from Skullcandy to their target audiences</li>
+        </ul>
+        <h3>Summary of Deliverables and Recommendations</h3>
+        <h4>Using predictive analytics in establishing Skullcandy's brand and improving the e-commerce experience</h4>
+        <img src="Engagement.png">
+        <p>To help compare brands and their relationships to dominant target audiences we provide the following dashboard. This dashboard lets you interactively visualize the brand and customer segments. We explain this dashboard in further detail <a href="#walkthrough">below</a>.</p>
+        <p><a href="http://ec2-54-188-7-50.us-west-2.compute.amazonaws.com:3838/shiny-app/">Click here to see live dashboard</a></p>
+        <a href="http://ec2-54-188-7-50.us-west-2.compute.amazonaws.com:3838/shiny-app/">
+        <h4>Example data collection with a focus on engagement</h4>
+        <p>We recommend using a satisfaction survey or market survey with social login to collect additional information on your core customer base. We built this simple app in Python Django framework to help with the data collection from Twitter.</p>
+        <p><a href="http://ec2-54-202-248-221.us-west-2.compute.amazonaws.com/">Click here to see live demo survey app</a></p>
+        <img src="twitter-survey-app.png">
+        <h4>Example dynamic messaging with predictive social engagement</h4>
+        <img src="example.png">
+        <h4>Example predictive engagement</h4>
+        <p>Last, we suggest a simple but very effective social engagement strategy. During the checkout process, a customer can choose to share their excitement of the purchase with their facebook friends or twitter followers. In doing so we can predict the lifetime value of that customer and provide an immediate incentive. In return we collect additional information about them through increased access to their social data as well as immediate boost in grassroots marketing.</p>
+        <p>Below is an image of a similar type of engagement already common in Amazon’s checkout process.</p>
+        <img src="amazonthanks.png">
+        <h3>Technical overview</h3>
+        <img src="bmdc_skullcandy.png">
+        <h3 id="walkthrough">Brand comparision app walkthrough</h3>
+        <p>The app is an interactive tool for exploring relative differences in customer engagement on each of the relevant brands.</p>
+        <img src="dasboard.png">
+        <p>An overall sentiment score is presented over time as computed by the total aggregate of relevant product reviews on Amazon. A similar score can be plotted by scoring relevent tweets or other social feeds over time.</p>
+        <img src="brand-sentiment.png">
+        <h4>Main social sentiment trend lines over time</h4>
+        <p>It is important to react to and engage with customers and potential customers in their channels. The next section helps sort through the noise to identify key drivers in overall brand sentiment. Sorting and clustering these help identify key trends in products or product categries.</p>
+        <img src="product-reviews.png">
+        <h4>Segmenting customers and competitors' customers</h4>
+        <p>Segmenting your entire customer base helps identify strengths and opportunities. Being able to compare your customer segments to those same segments of your competitors is huge insight. The final section helps you see how your twitter followers overlap with those followers of other key brands.</p>
+        <h4>Social sentiment dashboard app</h4>
+        <img src="dashboard.png"></a>
+<h3>Team members:</h3>
 <ul>
   <li><a href="http://www.linkedin.com/in/altonalexander">Alton Alexander</a></li>
   <li><a href="http://www.linkedin.com/pub/brett-denney/19/46a/207">Brett Denney</a></li>
   <li><a href="http://www.linkedin.com/in/davidbgonzalez">David Gonzalez</a></li>
 </ul>
-
-<h3>Skullcandy's problem statements and our proposed solutions</h3>
-    <h4>Problem 1: Who are the non-customers who follow us and visit the same websites as our customers?</h4>
-    <p>We decided that it with the dataset available and the data we could go after to take a look at Skullcandy's twitter followers and to build a generalized profile of those individuals. From there we collected information about individuals following Skullcandy's competition. What we were able to generate is a dashboard that helps to visuzalize how Skullcandy's followers engage the compettion as well as why types types of individuals follow the competition but do not follow Skullcandy.</p>
-    <p>How are followers and non-followers similar/different?</p>
-    <h4>Problem 2: Who might be interested in a buds "subscription"?</h4>
-    <p>Who are the heavy users? Customer IDs with multiple purchases</p>
-    <h4>Problem 3:</h4>
-    <h5>Can we correlate competitor sentiment with their sales (NPD Data) or with our sales?</h5>
-    <p>Timeseries of customer sentiment over time with respect to each competitors product and Skullcandy's products using Amazon reviews.</p>
-    <h5>How can we predict competitor sentiment (positive or negative>, react to it more quickly, and take action to minimize competitor benefit and maximize our benefit?</h5>
-    <p>Work up of the Amazon reviews and high prestige reviewers</p>
-    <h5>How can real-time answers and actions be taken?</h5>
-    <p>Automated watching of social media looking for key signals</p>
-    <p>Automated watching of Amazon reviews looking for high prestige reviewers to weigh in, engage them preemptively, watch for newer reviewers gaining traction.</p>
-    <h4>Problem 4: Is someone who recently purchased a cell phone, or gaming console, now a likely purchaser of headphones, headsets, or earbuds? and How do we identify these individuals and markets appropriately?</h4>
-    <p>Work up of customers/archetypes as well as purchasers (e.g. mom and grandma)</p>
-
       </section>
     </div>
 
