@@ -89,11 +89,8 @@ USE_TZ = True
 STATIC_ROOT = '/home/ec2-user/srv/mysite_static/'
 STATIC_URL = '/static/'
 
-#AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
-#AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
-
-AWS_ACCESS_KEY_ID = 'AKIAJLO3IXQXZFB2YZKQ'
-AWS_SECRET_ACCESS_KEY = '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'
+AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
+AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
 AWS_STORAGE_BUCKET_NAME = 'django-app-skullcandy-mysite'
 STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 
